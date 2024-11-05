@@ -23,7 +23,7 @@ jobs:
 
       - name:  Maven
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-          -Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')
+          -Dsonar.projectKey=tpintegrationcontinue-HAZOURLIMohamedMehdi
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}  
 
       - name: Build Maven
