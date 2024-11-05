@@ -22,7 +22,9 @@ jobs:
           distribution: 'corretto'  
 
       - name:  Maven
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar-Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')  
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+          -Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }}  
 
       - name: Build Maven
         run: mvn -B package  
