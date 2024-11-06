@@ -114,7 +114,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
     @Test
      void supprimeTousListeVide() {
+        System.out.println("test  1");
         listeATester.supprimePremier(1);
+        System.out.println("test  2");
         assertNull(listeATester.tete);
         assertEquals(0, listeATester.getSize());
     }
