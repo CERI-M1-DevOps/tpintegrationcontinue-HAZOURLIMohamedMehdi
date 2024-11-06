@@ -51,7 +51,7 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.ajout(3);
         System.out.println(listeATester);
     }
-
+ 
     @Test
      void modifiePremier() {
         listeATester.ajout(1);
