@@ -60,6 +60,8 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.modifiePremier(2, 4);
         assertEquals("ListeSimple(Noeud(3), Noeud(4), Noeud(1))",listeATester.toString());
         assertEquals(4, listeATester.tete.getSuivant().getElement());
+        listeATester.modifiePremier(5, 20);
+        assertEquals("ListeSimple(Noeud(3), Noeud(4), Noeud(1))",listeATester.toString());
     }
 
     @Test
@@ -99,6 +101,8 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.supprimePremier(2);
         assertEquals("ListeSimple(Noeud(4), Noeud(3), Noeud(1))",listeATester.toString());
         assertEquals(3, listeATester.getSize());
+        listeATester.supprimePremier(10);
+        assertEquals("ListeSimple(Noeud(4), Noeud(3), Noeud(1))",listeATester.toString());
     }
 
     @Test
@@ -240,6 +244,21 @@ import static org.junit.jupiter.api.Assertions.*;
         System.out.println(listeATester);
         assertEquals("ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))",listeATester.toString());
     }
+
+    @Test
+    void echangerLeMemeNoeud() {
+       listeATester.ajout(3);
+       listeATester.ajout(2);
+       listeATester.ajout(1);
+       Noeud r2 = listeATester.tete;
+       Noeud r1 = listeATester.tete;
+       assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3))",listeATester.toString());
+       listeATester.echanger(r1, r2);
+       System.out.println(listeATester);
+       assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3))",listeATester.toString());
+   }
+
+
 
     @Test
      void echangerLePremierEnSecondArgumentNoeudAvecUnAutre() {
