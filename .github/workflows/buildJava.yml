@@ -3,16 +3,16 @@ name: Java CI with Maven
 on:
   pull_request:
     branches:
-      - main
+      - main 
 
 jobs:
   build:
     name: Build, Test Java Project
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  
 
     steps:
       - name: Check code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  
 
       - name: Cache Maven dependencies
         uses: actions/cache@v4
@@ -26,9 +26,9 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '21'
-          distribution: 'corretto'
+          distribution: 'corretto'  
 
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar -Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')
