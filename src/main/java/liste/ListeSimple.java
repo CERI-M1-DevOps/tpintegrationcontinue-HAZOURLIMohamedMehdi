@@ -8,7 +8,7 @@ public class ListeSimple {
      * @return la taille de la liste.
      */
     public long getSize() {
-        return size;
+        return size; 
     }
 /*
  * Ajoute un élément au début de la liste.
