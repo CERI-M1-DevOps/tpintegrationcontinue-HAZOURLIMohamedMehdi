@@ -43,7 +43,7 @@ public class ListeSimple {
                 courant.setElement(nouvelleValeur);
             courant = courant.getSuivant();
         }
-    }
+    } 
 /**
  * Représente la liste sous forme de chaîne de caractères.
  * @return Une représentation textuelle de la liste, avec les éléments séparés par des virgules.
