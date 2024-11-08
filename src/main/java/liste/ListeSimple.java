@@ -31,7 +31,11 @@ public class ListeSimple {
         if (courant != null)
             courant.setElement(nouvelleValeur);
     }
-
+/*
+ *Modifie toutes les occurrences d'un élément spécifique dans la liste.
+ * @param element L'élément à rechercher dans la liste.
+ * @param nouvelleValeur La nouvelle valeur à attribuer aux occurrences trouvées.
+ */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -40,7 +44,10 @@ public class ListeSimple {
             courant = courant.getSuivant();
         }
     }
-
+/**
+ * Représente la liste sous forme de chaîne de caractères.
+ * @return Une représentation textuelle de la liste, avec les éléments séparés par des virgules.
+ */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
