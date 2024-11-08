@@ -243,6 +243,8 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.echanger(r1, r2);
         System.out.println(listeATester);
         assertEquals("ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))",listeATester.toString());
+
+        
     }
 
     @Test
